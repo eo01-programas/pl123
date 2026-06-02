@@ -291,7 +291,7 @@
                     plegado_supervisor: supervisor,
                     plegado_equipo: equipo,
                     plegado_estado: 'OK',
-                    plegado_fecha: TintoreriaUtils.formatDateForUi(new Date())
+                    plegado_fecha: TintoreriaUtils.formatProcessDateTime(new Date())
                 };
 
                 return TintoreriaAPI.updateRecord(recordId, changes);
