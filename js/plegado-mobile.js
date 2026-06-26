@@ -254,7 +254,8 @@
         const supervisor = String(els.supervisorSelect ? els.supervisorSelect.value : '').trim();
         const equipoRaw = String(els.equipoInput.value || '').trim();
         const equipo = TintoreriaUtils.sanitizePlegadoEquipo(equipoRaw);
-        const turno = String(els.turnoInput.value || calculateTurno()).trim() || calculateTurno();
+        const turno = calculateTurno();
+        els.turnoInput.value = turno;
 
         if (!selectedIds.length) {
             showToast('Selecciona al menos una fila.');
